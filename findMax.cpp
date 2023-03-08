@@ -1,6 +1,3 @@
-#include <iostream>
-using namespace std;
-
 void findMax()
 {
     int N;
@@ -15,9 +12,4 @@ void findMax()
     }
     
     cout << max;
-}
-
-int main()
-{
-    findMax();
 }
