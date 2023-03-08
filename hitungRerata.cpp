@@ -1,6 +1,3 @@
-#include <iostream>
-using namespace std;
-
 void hitungRerata()
 {
     int N;
@@ -14,9 +11,4 @@ void hitungRerata()
     }
     
     cout << total/N;
-}
-
-int main()
-{
-    hitungRerata();
 }
