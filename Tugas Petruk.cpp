@@ -5,12 +5,12 @@ using namespace std;
 template<typename T> class AgeCalculator {
 public:
     // Constructor
-    AgeCalculator(const T &newDay, const T &newMonth, const T &newYear) : day(newDay), month(newMonth), year(newYear) {}
+    AgeCalculator(T newDay, T newMonth, T newYear) : day(newDay), month(newMonth), year(newYear) {}
 
     // Setter
-    void setDay(const T &newDay);
-    void setMonth(const T &newMonth);
-    void setYear(const T &newYear);
+    void setDay(T newDay);
+    void setMonth(T newMonth);
+    void setYear(T newYear);
 
     // Getter
     T getDay();
@@ -35,19 +35,19 @@ private:
 };
 
 template<typename T>
-void AgeCalculator<T>::setDay(const T &newDay)
+void AgeCalculator<T>::setDay(T newDay)
 {
     this->day = newDay;
 }
 
 template<typename T>
-void AgeCalculator<T>::setMonth(const T &newMonth)
+void AgeCalculator<T>::setMonth(T newMonth)
 {
     this->month = newMonth;
 }
 
 template<typename T>
-void AgeCalculator<T>::setYear(const T &newYear)
+void AgeCalculator<T>::setYear(T newYear)
 {
     this->year = newYear;
 }
