@@ -83,46 +83,44 @@ void Merge(int *arr, int aLeft, int aRight, int bLeft, int bRight) {
 }
 
 //Quick Sort
-void QuickSort(int *arr, int left, int right) {
-    if (left >= right) return;
+int partition(int *arr, int low, int high) {
+    int pivot = arr[high];
+    int i = low - 1;
 
-    int pivot = arr[(left+right)/2];
-    int pLeft = left;
-    int pRight = right;
-
-    while (pLeft <= pRight) {
-        while (arr[pLeft] <= pivot) {
-            ++pLeft;
-        }
-
-        while (arr[pRight] > pivot) {
-            --pRight;
-        }
-
-        if (pLeft <= pRight) {
-            swap(arr[pLeft], arr[pRight]);
-            ++pLeft;
-            --pRight;
+    for (int j = low; j <= high - 1; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            swap(arr[i], arr[j]);
         }
     }
 
-    QuickSort(arr, left, pRight);
-    QuickSort(arr, pLeft, right);
+    swap(arr[i + 1], arr[high]);
+    return i + 1;
+}
+
+void QuickSort(int *arr, int low, int high) {
+    if (low < high) {
+        int pivot = partition(arr, low, high);
+
+        QuickSort(arr, low, pivot - 1);
+        QuickSort(arr, pivot + 1, high);
+    }
 }
 
 int main() 
 {
-    int arr[] = {3, 2, 1};
-    BubbleSort(arr, 3);
-    SelectionSort(arr, 3);
-    MergeSort(arr, 0, 2);
-    QuickSort(arr, 0, 2);
+    int arr[1000000];
+    
+    for (int i = 0; i < 1000000; i++) {
+    cout << i << endl;
+    	arr[i] = 10;
+    }
+    
+    BubbleSort(arr, 1000000);
 
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 1000000; i++) {
         cout << arr[i] << " ";
     }
     cout << endl;
-  
-    return 0;
 
 } 
