@@ -1,5 +1,4 @@
 // Buat kode program untuk mengimplementasikan algoritma Sorting: Bubble Sort, Selection Sort, Merge Sort dan Quick Sort. Lalu lengkapi data pada tabel berikut.
-// Buat kode program untuk mencari Bilangan Fibonacci dengan menggunakan teknik Rekursif dan Dynamic Programming, kemudian bandingkan running timenya.
 
 #include <iostream>
 using namespace std;
